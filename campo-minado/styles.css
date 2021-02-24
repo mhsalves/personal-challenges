@@ -1,0 +1,68 @@
+.score-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  max-width: 420px;
+  margin-bottom: 16px;
+}
+
+.score-container .score-exploded, .score-container .score-not-exploded {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.score-container .score-exploded {
+  background-color: darkred;
+  color: white;
+}
+
+.score-container .score-not-exploded {
+  background-color: green;
+  color: white;
+}
+
+.score-container .count {
+  font-weight: bold;
+}
+
+.area {
+  width: 420px;
+  height: 420px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  border: 1px solid black;
+}
+
+.area .spot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.area .spot .mine {
+  opacity: 0;
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+.area .spot .mine.touched {
+  opacity: 1;
+}
+
+.area .spot .mine.exploded {
+  background-color: red;
+}
+
+.area .spot .mine.not-exploded {
+  background-color: green;
+}
+
